@@ -13,4 +13,32 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  /* background-image: url(../images/background.png); */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: var(--inter), fantasy;
+  font-variation-settings: 'wght' 400;
+  padding: 90px 0 0 0;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  inline-size: var(--content-inline-size);
+  block-size: 40vh;
+  background-color: #fff;
+  border: #000 2px solid;
+  gap: 15px;
+  font-family: var(--prst);
+  margin: auto;
+}
+.header-titile{
+  display: inline;
+  font-size: 65px;
+}
+.header-text{
+  display: inline;
+  text-transform: uppercase;
 }
