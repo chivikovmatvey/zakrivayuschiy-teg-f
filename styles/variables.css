@@ -4,7 +4,7 @@
   --prst: "PressStart2P";
   --wght-par: "400";
   --wght-title: "700";
-  --content-inline-size: clamp(335px, 50vw - 1px, 700px);
+  --content-inline-size: clamp(335px, 50vw - 1px, 702px);
   --background-gradient: repeating-linear-gradient(
       #d3d3d3 0 2px,
       rgba(0, 0, 0, 0) 2px 4px

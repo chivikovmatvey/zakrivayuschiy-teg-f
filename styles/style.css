@@ -11,9 +11,14 @@
 */
 
 .page {
-  padding: 90px 0 0 0;
+  padding: 100px 0 0 0;
   font-family: var(--inter), fantasy;
-  background-image: var(--background-gradient);
+  background-image: var(
+    --background-gradient,
+    repeating-linear-gradient(#d3d3d3 0 2px, rgba(0, 0, 0, 0) 2px 4px),
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgba(0, 0, 0, 0) 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a)
+  );
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -28,8 +33,8 @@
   gap: 20px;
   margin: auto;
   border: #000 2px solid;
-  padding: 135px 0;
-  font-family: var(--prst);
+  padding: 128px 0;
+  font-family: var(--prst, sans-serif);
   background-color: #fff;
   inline-size: var(--content-inline-size);
 }
@@ -43,12 +48,12 @@
   text-transform: uppercase;
 }
 main {
-  margin: 95px 0 0 0;
+  margin: 100px 0 0 0;
 }
 .card-list {
   display: flex;
   flex-direction: column;
-  gap: 47px;
+  gap: 49px;
   margin: auto;
   inline-size: var(--content-inline-size);
 }
@@ -59,19 +64,17 @@ main {
 .card-title {
   padding: 6px 10px;
   font-size: 1.13rem;
+  line-height: 1.2;
   font-variation-settings: "wght" 700;
-  min-block-size: 33px;
 }
 .wrap-img {
   position: relative;
 }
 .track {
-  object-fit: cover;
   inline-size: var(--content-inline-size);
   max-inline-size: 100%;
   block-size: 100%;
-  min-block-size: 699px;
-  max-block-size: 100%;
+  max-block-size: 699px;
 }
 .img-filter-blur {
   filter: blur(5px);
@@ -99,24 +102,26 @@ main {
   top: 25px;
   right: 25px;
   opacity: 0.4;
-  font-family: var(--prst);
+  font-family: var(--prst, sans-serif);
   font-size: 0.88rem;
-  text-shadow: #fff 2px 2px 0px ;
+  text-shadow: #fff 2px 2px 0px;
   mix-blend-mode: hard-light;
 }
 @supports (-webkit-text-stroke: 1px #fff) {
   .img-lable {
-    -webkit-text-stroke: 1px #fff;
     text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
   }
 }
-.card-text {
-  margin: 20px 25px;
-  font-size: 1.13rem;
+.wrap-text {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 21px 25px 25px 25px;
 }
-.card-text__place {
-  margin: 25px;
+.card-text {
   font-size: 1.13rem;
+  line-height: 117%;
 }
 .button-wrap {
   display: flex;
@@ -128,11 +133,11 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3px 6px 0 0;
+  margin: 0 6px 0 0;
   border: none;
   padding: 0;
   background: none;
-  block-size: 37px;
+  block-size: 35px;
 }
 .like-icon {
   display: block;
@@ -145,7 +150,7 @@ main {
   position: relative;
   border: 2px #000 solid;
   padding: 10px 0;
-  font-family: var(--prst);
+  font-family: var(--prst, sans-serif);
   font-size: 0.9rem;
   background: none;
   transition: box-shadow 0.5s ease, outline 0.3s ease;
@@ -199,7 +204,7 @@ main {
   align-items: center;
   gap: 10px;
   margin: 48px auto 105px auto;
-  font-family: var(--prst);
+  font-family: var(--prst, sans-serif);
   font-size: 14px;
   background-color: #fff;
   transition: box-shadow 0.5s ease;
@@ -216,13 +221,13 @@ button .diskette-icon {
   gap: 30px;
   max-width: 353px;
   padding: 30px;
-  font-family: var(--prst);
+  font-family: var(--prst, sans-serif);
   background-color: #fff;
   inline-size: 100%;
 }
 #menu-dialog::backdrop {
   opacity: 0.75;
-  background-color: #000;
+  /* background-color: #000; */
 }
 .wrap-diskette {
   display: flex;
@@ -243,8 +248,10 @@ dialog .diskette-icon {
   position: relative;
   border: 2px #000 solid;
   color: #fff;
+  font-size: 0.88rem;
+  text-transform: uppercase;
   background: none;
-  block-size: 30px;
+  min-block-size: 38px;
   inline-size: 100%;
 }
 
@@ -267,12 +274,12 @@ dialog .diskette-icon {
     margin: 101px 0 0 0;
   }
   .card-list {
-    gap: 48px;
+    gap: 50px;
     inline-size: 100%;
   }
   .card-title {
-    padding: 6px 0 5px 10px;
-    min-block-size: 33px;
+    padding: 6px 10px 5px 10px;
+    line-height: 1.19;
   }
   .track {
     inline-size: 100%;
@@ -286,18 +293,37 @@ dialog .diskette-icon {
     top: 22px;
     right: 12px;
   }
-  .card-text {
-    margin: 22px 25px;
+  .card-list li:nth-child(7) .wrap-text {
+    padding: 23px 29px 25px 25px;
   }
-  .card-text__place {
-    margin: 0 0 25px 25px;
+  .card-list li:nth-child(8) .wrap-text {
+    padding: 23px 26px 25px 25px;
+  }
+  .wrap-text {
+    padding: 23px 27px 25px 25px;
   }
   .modal-button__open {
     flex-direction: column;
-    min-block-size: 84px;
-    min-inline-size: 306px;
+    padding: 10px 0;
+    min-block-size: 85px;
+    min-inline-size: 310px;
+  }
+  button .diskette-icon {
+    margin: 3px 0 0 0;
+    block-size: 28px;
+  }
+  #menu-dialog[open] {
+    gap: 30px;
+    max-width: 353px;
+    padding: 30px 42px;
+  }
+  .wrap-diskette {
+    justify-content: space-between;
+  }
+  .dialog-text {
+    line-height: 150%;
+    min-inline-size: 200px;
   }
   .modal-button__close {
-    block-size: 38px;
   }
 }
