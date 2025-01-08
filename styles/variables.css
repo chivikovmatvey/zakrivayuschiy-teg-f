@@ -1,13 +1,15 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-:root{
-  --inter: 'Inter';
-  --prst: 'PressStart2P';
-  --wght-par: '400';
-  --wght-title: '700';
+:root {
+  --inter: "Inter";
+  --prst: "PressStart2P";
+  --wght-par: "400";
+  --wght-title: "700";
   --content-inline-size: clamp(335px, 50vw - 1px, 700px);
-  --background-gradient: 
-    repeating-linear-gradient(#d3d3d3 0 2px, rgba(0, 0, 0, 0) 2px 4px), 
-    repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgba(0, 0, 0, 0) 2px 4px), 
+  --background-gradient: repeating-linear-gradient(
+      #d3d3d3 0 2px,
+      rgba(0, 0, 0, 0) 2px 4px
+    ),
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgba(0, 0, 0, 0) 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
   --heart-contour-color: #000;
   --heart-sparcle-color: red;

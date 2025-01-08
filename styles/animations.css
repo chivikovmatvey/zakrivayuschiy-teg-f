@@ -1,22 +1,22 @@
-@keyframes heart-scale{
-  from{
+@keyframes heart-scale {
+  from {
     scale: 1;
   }
-  50%{
+  50% {
     scale: 1.25;
   }
-  to{
+  to {
     scale: 1;
   }
 }
-@keyframes heart-sparks{
-  from{
+@keyframes heart-sparks {
+  from {
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 1;
   }
-  to{
+  to {
     opacity: 0;
   }
 }
@@ -35,37 +35,37 @@
   opacity: 0;
 }
 
-.card__icon-button:hover .core{
+.card__icon-button:hover .core {
+  fill: var(--heart-contour-color);
   transition-delay: 0.03s;
+}
+.card__icon-button:hover .main-body {
   fill: var(--heart-contour-color);
 }
-.card__icon-button:hover .main-body{
-  fill: var(--heart-contour-color);
-}
-.card__icon-button:active .core{
+.card__icon-button:active .core {
+  fill: var(--heart-main-color);
   transition-delay: 0.03s;
+}
+.card__icon-button:active .main-body {
   fill: var(--heart-main-color);
 }
-.card__icon-button:active .main-body{
+.like-icon.is-liked .contour {
   fill: var(--heart-main-color);
-}
-.like-icon.is-liked .contour{
   transition-delay: 0.03s;
-  fill: var(--heart-main-color);
 }
-.like-icon.is-liked .main-body{
+.like-icon.is-liked .main-body {
+  fill: var(--heart-main-color);
   transition-delay: 0.03s;
-  fill: var(--heart-main-color);
 }
-.like-icon.is-liked .core{
+.like-icon.is-liked .core {
+  fill: var(--heart-main-color);
   transition-delay: 0.03s;
-  fill: var(--heart-main-color);
 }
-.like-icon.is-liked{
+.like-icon.is-liked {
   transition-delay: 0.1s;
   animation: heart-scale 0.3s ease-in;
 }
-.like-icon.is-liked .sparks{
+.like-icon.is-liked .sparks {
   transition-delay: 0.3s;
   animation: heart-sparks 0.3s ease-in;
 }
