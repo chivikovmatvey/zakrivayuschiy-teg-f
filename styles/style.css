@@ -227,7 +227,7 @@ button .diskette-icon {
 }
 #menu-dialog::backdrop {
   opacity: 0.75;
-  /* background-color: #000; */
+  background-color: #000;
 }
 .wrap-diskette {
   display: flex;
@@ -293,14 +293,8 @@ dialog .diskette-icon {
     top: 22px;
     right: 12px;
   }
-  .card-list li:nth-child(7) .wrap-text {
-    padding: 23px 29px 25px 25px;
-  }
-  .card-list li:nth-child(8) .wrap-text {
-    padding: 23px 26px 25px 25px;
-  }
   .wrap-text {
-    padding: 23px 27px 25px 25px;
+    padding: 23px 25px 25px 25px;
   }
   .modal-button__open {
     flex-direction: column;
@@ -314,14 +308,15 @@ dialog .diskette-icon {
   }
   #menu-dialog[open] {
     gap: 30px;
-    max-width: 353px;
-    padding: 30px 42px;
+    max-inline-size: 340px;
+    padding: 30px 38px;
   }
   .wrap-diskette {
     justify-content: space-between;
+    gap: 0;
   }
   .dialog-text {
-    line-height: 150%;
-    min-inline-size: 200px;
+    margin: 0 0 0 5px;
+    min-inline-size: 199px;
   }
 }
